@@ -30,6 +30,14 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#FFF8E7" },
+      { title: "Bumbu lande" },
+      { property: "og:title", content: "Bumbu lande" },
+      { name: "twitter:title", content: "Bumbu lande" },
+      { name: "description", content: "Bouncy Joy is a Latvian rental website for bouncy castles and inflatable attractions for children's parties and events." },
+      { property: "og:description", content: "Bouncy Joy is a Latvian rental website for bouncy castles and inflatable attractions for children's parties and events." },
+      { name: "twitter:description", content: "Bouncy Joy is a Latvian rental website for bouncy castles and inflatable attractions for children's parties and events." },
+      { name: "twitter:card", content: "summary" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       {

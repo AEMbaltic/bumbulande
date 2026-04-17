@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const bookingSchema = z.object({
   attraction: z.string().min(1, "Lūdzu, izvēlies atrakciju"),
-  date: z.date({ required_error: "Lūdzu, izvēlies datumu" }),
+  date: z.date({ message: "Lūdzu, izvēlies datumu" }),
   name: z
     .string()
     .trim()
@@ -16,9 +16,7 @@ export const bookingSchema = z.object({
   address: z.string().trim().min(3, "Lūdzu, ievadi adresi").max(200),
   city: z.string().trim().min(2, "Lūdzu, ievadi pilsētu").max(100),
   delivery: z.enum(["delivery", "pickup"]),
-  terms: z.literal(true, {
-    errorMap: () => ({ message: "Lūdzu, apstiprini noteikumus" }),
-  }),
+  terms: z.literal(true, { message: "Lūdzu, apstiprini noteikumus" }),
 });
 
 export type BookingForm = z.infer<typeof bookingSchema>;
